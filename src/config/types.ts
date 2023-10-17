@@ -16,7 +16,7 @@ export interface Input {
   dataSourceId: string;
 }
 
-interface Option {
+export interface Option {
   label: string;
   value: any;
 }
