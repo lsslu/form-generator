@@ -6,14 +6,14 @@ export interface Form {
 export interface Field {
   name: string;
   label: string;
-  defaultValue: any;
+  defaultValue?: any;
   children?: Array<Field>;
   input?: Input;
 }
 
 export interface Input {
   inputType: string;
-  dataSource?: DataSource;
+  dataSourceId: string;
 }
 
 interface Option {
@@ -22,9 +22,10 @@ interface Option {
 }
 
 export interface DataSource {
+  id: string;
   type: "static" | "dynamic";
-  data: Array<Option>;
-  url: string;
-  labelFrom: string;
-  valueFrom: string;
+  data?: Array<Option>;
+  url?: string;
+  labelFrom?: string;
+  valueFrom?: string;
 }
